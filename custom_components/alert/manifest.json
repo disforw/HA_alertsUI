@@ -1,6 +1,7 @@
 {
   "domain": "alert",
   "name": "Alert",
+  "version": "10.0",
   "documentation": "https://www.home-assistant.io/integrations/alert",
   "after_dependencies": ["notify"],
   "codeowners": ["@home-assistant/core"],
