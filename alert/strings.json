@@ -1,0 +1,89 @@
+{
+  "title": "Alert",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add alert for entity state",
+        "description": "Create an alert which notifies you on problematic issues.",
+        "data": {
+          "entity_id": "Input entity",
+          "name": "Name"
+        }
+      },
+      "options": {
+        "title": "Add alert for entity state",
+        "description": "Configure alert parameters.",
+        "data": {
+          "state": "State",
+          "repeat": "Repeat",
+          "can_acknowledge": "Can acknowledge",
+          "skip_first": "Skip first alert"
+        },
+        "data_description": {
+          "state": "Controls the number of decimal digits in the output when the statistics characteristic is mean or median.",
+          "repeat": "Number of minutes before the notification should be repeated. Can be either a number or a list of numbers",
+          "can_acknowledge": "Allows the alert to be acknowledable"
+        }
+      },
+      "notifier": {
+        "title": "Add alert for entity state",
+        "description": "Configure notifier settings.",
+        "data": {
+          "message": "Message",
+          "done_message": "Message when alert stop",
+          "title": "Message title",
+          "data": "Message data",
+          "notifiers": "Notify entities"
+        },
+        "data_description": {
+          "message": "Notify message with template support.",
+          "done_message": "Notify message with template support when alert has stoppped.",
+          "title": "Notify title with template support.",
+          "data": "Extra parameters to send with the notifier",
+          "notifiers": "One or more notify entities to recieve the alert"
+        }
+      }
+    },
+    "error": {
+      "repeat_error": "List of repeats in minutes needs to be integer or float"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "description": "Configure alert parameters.",
+        "data": {
+          "state": "[%key:component::alert::config::step::options::data::state%]",
+          "repeat": "[%key:component::alert::config::step::options::data::repeat%]",
+          "can_acknowledge": "[%key:component::alert::config::step::options::data::can_acknowledge%]",
+          "skip_first": "[%key:component::alert::config::step::options::data::skip_first%]"
+        },
+        "data_description": {
+          "state": "[%key:component::alert::config::step::options::data_description::state%]",
+          "repeat": "[%key:component::alert::config::step::options::data_description::repeat%]",
+          "can_acknowledge": "[%key:component::alert::config::step::options::data_description::can_acknowledge%]"
+        }
+      },
+      "notifier": {
+        "description": "Configure notifier settings.",
+        "data": {
+          "message": "[%key:component::alert::config::step::notifier::data::message%]",
+          "done_message": "[%key:component::alert::config::step::notifier::data::done_message%]",
+          "title": "[%key:component::alert::config::step::notifier::data::title%]",
+          "data": "[%key:component::alert::config::step::notifier::data::data%]",
+          "notifiers": "[%key:component::alert::config::step::notifier::data::notifiers%]"
+        },
+        "data_description": {
+          "message": "[%key:component::alert::config::step::notifier::data_description::message%]",
+          "done_message": "[%key:component::alert::config::step::notifier::data_description::done_message%]",
+          "title": "[%key:component::alert::config::step::notifier::data_description::title%]",
+          "data": "[%key:component::alert::config::step::notifier::data_description::data%]",
+          "notifiers": "[%key:component::alert::config::step::notifier::data_description::notifiers%]"
+        }
+      }
+    },
+    "error": {
+      "repeat_error": "List of repeats in minutes needs to be integer or float"
+    }
+  }
+}
