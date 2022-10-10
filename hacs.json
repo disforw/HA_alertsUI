@@ -1,6 +1,6 @@
 {
     "name": "alerts",
-    "domains": ["sensor"],
+    "domains": ["alert"],
     "homeassistant": "2021.5",
     "iot_class": "Local Push"
 }
