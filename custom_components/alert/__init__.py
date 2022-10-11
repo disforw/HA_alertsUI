@@ -261,6 +261,7 @@ class Alert(ToggleEntity):
         self.hass = hass
         self._attr_name = name
         self._unique_id = "alert-" + name
+        self._attr_unique_id = "alert-" + name
         self._alert_state = state
         self._skip_first = skip_first
         self._data = data
@@ -294,9 +295,6 @@ class Alert(ToggleEntity):
         )
 
     @final  # type: ignore[misc]
-    @property
-    def unique_id(self):
-        return self._unique_id
     @property
     # pylint: disable=overridden-final-method
     def state(self) -> str:  # type: ignore[override]
