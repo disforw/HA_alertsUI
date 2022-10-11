@@ -295,8 +295,8 @@ class Alert(ToggleEntity):
 
     @final  # type: ignore[misc]
     @property
-     def unique_id(self):
-         return self._unique_id
+    def unique_id(self):
+        return self._unique_id
     @property
     # pylint: disable=overridden-final-method
     def state(self) -> str:  # type: ignore[override]
