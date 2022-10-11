@@ -260,6 +260,7 @@ class Alert(ToggleEntity):
         """Initialize the alert."""
         self.hass = hass
         self._attr_name = name
+        self._unique_id = "alert-" + name
         self._alert_state = state
         self._skip_first = skip_first
         self._data = data
